@@ -5,6 +5,9 @@ public class PokemonL {
         super(nombre, tipo);
         this.localizacion = localizacion;
     }
+    public String getLocalizacion() {
+        return localizacion;
+    }
 
 }
 

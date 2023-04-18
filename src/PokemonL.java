@@ -8,6 +8,9 @@ public class PokemonL {
     public String getLocalizacion() {
         return localizacion;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() + "\nLocalización: " + (localizacion == null ? "???" : localizacion);
+    }
 }
 

@@ -1,4 +1,5 @@
 public class ListaPokemon {
+
     private Pokemon[] pokemonList;
     private int size;
 
@@ -18,33 +19,36 @@ public class ListaPokemon {
         pokemonList[size] = pokemon;
         size++;
         System.out.println("El pokemon " + pokemon.getNombre() + " ha sido añadido a la lista.");
+    }
 
-        public Pokemon removePokemon(String name) {
-            for (int i = 0; i < size; i++) {
-                if (pokemonList[i].getNombre().equals(name)) {
-                    for (int j = i; j < size - 1; j++) {
-                        pokemonList[j] = pokemonList[j + 1];
-                    }
-                    size--;
-                    System.out.println("El pokemon " + name + " ha sido eliminado de la lista.");
+    public Pokemon removePokemon(String name) {
+        for (int i = 0; i < size; i++) {
+            if (pokemonList[i].getNombre().equals(name)) {
+                for (int j = i; j < size - 1; j++) {
+                    pokemonList[j] = pokemonList[j + 1];
                 }
-            }
-            System.out.println("No se encontró el pokemon " + name + ".");
-            return null;
-        }  
-
-        public void mostrarPokemon() {
-            for (int i = 0; i < size; i++) {
-                System.out.println((i + 1) + ". " + pokemonList[i].toString());
-            }
-
-            public Pokemon getPokemon(int index) {
-                if (index >= 0 && index < size) {
-                    return pokemonList[index];
-                } else {
-                    return null;
-                }
+                size--;
+                System.out.println("El pokemon " + name + " ha sido eliminado de la lista.");
             }
         }
+        System.out.println("No se encontró el pokemon " + name + ".");
+        return null;
     }
+
+    public void mostrarPokemon() {
+        for (int i = 0; i < size; i++) {
+            System.out.println((i + 1) + ". " + pokemonList[i].toString());
+        }
+    }
+
+    public Pokemon getPokemon(int index) {
+        if (index >= 0 && index < size) {
+            return pokemonList[index];
+        } else {
+            return null;
+        }
+    }
+
+
+
 }

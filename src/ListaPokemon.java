@@ -32,10 +32,18 @@ public class ListaPokemon {
             System.out.println("No se encontró el pokemon " + name + ".");
             return null;
         }  
-        
+
         public void mostrarPokemon() {
             for (int i = 0; i < size; i++) {
                 System.out.println((i + 1) + ". " + pokemonList[i].toString());
+            }
+
+            public Pokemon getPokemon(int index) {
+                if (index >= 0 && index < size) {
+                    return pokemonList[index];
+                } else {
+                    return null;
+                }
             }
         }
     }

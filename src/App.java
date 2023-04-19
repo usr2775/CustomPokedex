@@ -1,6 +1,7 @@
 import java.util.Scanner;
-public class App {
-    public static void main(String[] args) throws Exception {
+
+public class Main {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         ListaPokemon avistados = new ListaPokemon();
         ListaPokemon capturados = new ListaPokemon();
@@ -69,7 +70,5 @@ public class App {
         }
 
         System.out.println("Adiós!");
-    }
-
     }
 }
